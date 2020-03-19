@@ -269,7 +269,7 @@ where `$dump_path` is the path to where you want to save your pretrained model, 
 To run experiments on multiple GPUs in a single machine, you can use the following command (the parameters after `train.py` are the same as above).
 ```bash
 export NGPU=4
-export CUDA_VISIBLE_DEVICES=0,1,2,3,4 # if you only use some of the GPUs in the machine
+export CUDA_VISIBLE_DEVICES=0,1,2,3 # if you only use some of the GPUs in the machine
 python -m torch.distributed.launch --nproc_per_node=$NGPU train.py
 ```
 
